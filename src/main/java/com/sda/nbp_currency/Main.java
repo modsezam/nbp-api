@@ -1,5 +1,7 @@
 package com.sda.nbp_currency;
 
+import com.sda.nbp_currency.model.CurrencyCode;
+
 import java.time.LocalDate;
 
 public class Main {
@@ -15,10 +17,18 @@ public class Main {
 
         CurrencyValueAverage currencyAverageValue = new CurrencyValueAverage();
         dateReadFromCurrentAverageJson = currencyAverageValue.getDateReadFromJson();
-        currencyAverageValue.printCurrentAverageExchange(dateCurrent, "USD", "EUR", "GBP", "CHF");
+        currencyAverageValue.printCurrentAverageExchange(dateCurrent,
+                CurrencyCode.USD.getCode(),
+                CurrencyCode.EUR.getCode(),
+                CurrencyCode.GBP.getCode(),
+                CurrencyCode.CHF.getCode());
 
         CurrencyValueDifference currencyValueDifference = new CurrencyValueDifference(dateReadFromCurrentAverageJson, dateOfPreviousExchange);
-        currencyValueDifference.printDifferenceCurrencyExchange(dateOfPreviousExchange, "USD", "EUR", "GBP", "CHF");
+        currencyValueDifference.printDifferenceCurrencyExchange(dateOfPreviousExchange,
+                CurrencyCode.USD.getCode(),
+                CurrencyCode.EUR.getCode(),
+                CurrencyCode.GBP.getCode(),
+                CurrencyCode.CHF.getCode());
 
     }
 

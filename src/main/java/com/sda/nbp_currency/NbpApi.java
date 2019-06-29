@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 public class NbpApi {
 
-
     String generatePathToNbpApi(String table, LocalDate date){
         String datePut = "";
         if (date != null){
@@ -23,8 +22,8 @@ public class NbpApi {
         return "http://api.nbp.pl/api/exchangerates/tables/"+ table +"/"+ datePut +"?format=json";
     }
 
-    String getJsonFromNbpApi(final String patch) throws IOException {
-        URL url = new URL(patch);
+    String getJsonFromNbpApi(final String path) throws IOException {
+        URL url = new URL(path);
         URLConnection connection = url.openConnection();
         InputStream input = connection.getInputStream();
 

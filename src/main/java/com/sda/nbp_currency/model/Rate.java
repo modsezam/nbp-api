@@ -1,7 +1,6 @@
 package com.sda.nbp_currency.model;
 
-public class Rates {
-    private String currency;
+public class Rate {
     private String code;
     private double mid;
     private double bid;

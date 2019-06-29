@@ -5,9 +5,9 @@ import java.util.List;
 public class Currency {
 
     private String effectiveDate;
-    private List<Rates> rates;
+    private List<Rate> rates;
 
-    public List<Rates> getRates() {
+    public List<Rate> getRates() {
         return rates;
     }
 
